@@ -58,7 +58,7 @@ function formatDay(timestamp) {
 
 function getForecast(city) {
   let apiKeyForecast = "59b3fc01054638ecba59foc51366fa4t";
-  let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKeyForecast}%units=metric`;
+  let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKeyForecast}&units=metric`;
 
   axios.get(apiUrlForecast).then(displayForecast);
 }
@@ -93,4 +93,4 @@ function displayForecast(response) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity = "Tehran";
+searchCity("Tehran");
