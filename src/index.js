@@ -16,7 +16,7 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
   tempElement.innerHTML = Math.round(temperature);
-
+  console.log(response.data.temperature.current);
   getForecast(response.data.city);
 }
 
