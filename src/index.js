@@ -2,9 +2,9 @@ function refreshWeather(response) {
   let weatherCity = document.querySelector("#weather-city");
   let timeElement = document.querySelector("#time");
   let conditionElement = document.querySelector("#condition");
-  let humidityElement = document.querySelector("humidity");
-  let windElement = document.querySelector("wind-speed");
-  let iconElement = document.querySelector("icon");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
   let tempElement = document.querySelector("#current-temperature");
 
   let date = new Date(response.data.time * 1000);
@@ -16,7 +16,6 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
   tempElement.innerHTML = Math.round(temperature);
-  console.log(response.data.temperature.current);
   getForecast(response.data.city);
 }
 
