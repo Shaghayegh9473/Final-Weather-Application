@@ -10,6 +10,7 @@ header {
 
 main {
   padding: 30px 0;
+  padding-left: 5px;
 }
 
 p {
@@ -117,13 +118,13 @@ a {
   /*padding-top: -20px; */
 }
 
-/* .weather-forecast-icon {
+.weather-forecast-icon {
   width: 88px;
   height: 88px;
   display: block;
-  margin: 0 auto; */
-/* padding-top: 30px; */
-/* } */
+  margin: 0 auto;
+  /* padding-top: 30px; */
+}
 
 .weather-forecast-temperatures {
   display: flex;
